@@ -1,0 +1,15 @@
+{
+    "username": {
+        "positive1": "standard_user",
+        "positive2": "performance_glitch_user",
+        "positive3": "error_user",
+        "positive4": "visual_user",
+        "negative": "incorrectUser",
+        "problemuser": "problem_user",
+        "lockuser": "locked_out_user"
+    },
+    "password": {
+        "positive": "secret_sauce",
+        "negative": "incorrectPassword"
+    }
+}
