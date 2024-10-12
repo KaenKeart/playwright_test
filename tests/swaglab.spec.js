@@ -16,19 +16,19 @@ test.describe('swaglabs', () => {
     test('tc-01 ', async ({ page }) => {
         const loginSwag = new LoginSwag(page);
         await loginSwag.login('', '');
-        // await loginSwag.verifyLoginEmptyText();
+        await loginSwag.verifyLoginEmptyText();
     });
 
     test('tc-02 ', async ({ page }) => {
         const loginSwag = new LoginSwag(page);
         await loginSwag.login(testDataLoginswag.username.negative, testDataLoginswag.password.positive);
-        // await loginSwag.verifyLoginFailText();
+        await loginSwag.verifyLoginFailText();
     });
 
     test('tc-03 ', async ({ page }) => {
         const loginSwag = new LoginSwag(page);
         await loginSwag.login(testDataLoginswag.username.lockuser, testDataLoginswag.password.positive);
-        // await loginSwag.verifyLoginLockText();
+        await loginSwag.verifyLoginLockText();
     });
 
     test('tc-04 ', async ({ page }) => {
@@ -39,7 +39,7 @@ test.describe('swaglabs', () => {
     test('tc-05 ', async ({ page }) => {
         const loginSwag = new LoginSwag(page);
         await loginSwag.login(testDataLoginswag.username.positive1, testDataLoginswag.password.positive);
-        // await loginSwag.verifyLoginSuccessText();
+        await loginSwag.verifyLoginSuccessText();
 
         await page.click('[data-test="add-to-cart-sauce-labs-backpack"]');
         await page.click('[data-test="shopping-cart-link"]');
@@ -47,7 +47,7 @@ test.describe('swaglabs', () => {
 
         const buy = new Buy(page);
         await buy.buy(dataCustomer.Firstname, dataCustomer.Lastname, dataCustomer.Code);
-        // await buy.verifyBuyText();
+        await buy.verifyBuyText();
 
         await page.click('[data-test="continue"]');
         await page.click('[data-test="finish"]');
@@ -56,7 +56,7 @@ test.describe('swaglabs', () => {
     test('tc-06 ', async ({ page }) => {
         const loginSwag = new LoginSwag(page);
         await loginSwag.login(testDataLoginswag.username.positive2, testDataLoginswag.password.positive);
-        // await loginSwag.verifyLoginSuccessText();
+        await loginSwag.verifyLoginSuccessText();
 
 
         const items = [
@@ -76,7 +76,7 @@ test.describe('swaglabs', () => {
 
         const buy = new Buy(page);
         await buy.buy(dataCustomer.Firstname, dataCustomer.Lastname, dataCustomer.Code);
-        // await buy.verifyBuyText();
+        await buy.verifyBuyText();
 
         await page.click('[data-test="continue"]');
         await page.click('[data-test="finish"]');
@@ -85,13 +85,13 @@ test.describe('swaglabs', () => {
     test('tc-07', async ({ page }) => {
         const loginSwag = new LoginSwag(page);
         await loginSwag.login(testDataLoginswag.username.positive3, testDataLoginswag.password.positive);
-        // await loginSwag.verifyLoginSuccessText();
+        await loginSwag.verifyLoginSuccessText();
     });
 
     test('tc-08', async ({ page }) => {
         const loginSwag = new LoginSwag(page);
         await loginSwag.login(testDataLoginswag.username.positive4, testDataLoginswag.password.positive);
-        // await loginSwag.verifyLoginSuccessText();
+        await loginSwag.verifyLoginSuccessText();
 
         await page.click('[data-test="add-to-cart-sauce-labs-bike-light"]');
         await page.waitForTimeout(1000);

@@ -1,4 +1,4 @@
-// buy.js (Page Object ใน Playwright)
+const { expect } = require('@playwright/test');
 class Buy {
     constructor(page) {
         this.page = page;
